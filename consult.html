@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Get started with TheMellCode IT Consulting — submit your intake form and schedule your free discovery call.">
+  <meta name="author" content="Mell Lessington">
+
+  <title>Get Started | TheMellCode IT Consulting</title>
+  <link rel="icon" type="image/x-icon" href="img/mellcodelogo/logo_size.jpg">
+
+  <!-- Bootstrap -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Fonts & Icons -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/consult.css">
+</head>
+
+<body class="consult-body">
+
+  <!-- Top Nav Bar -->
+  <nav class="consult-nav">
+    <div class="container d-flex align-items-center justify-content-between py-3">
+      <a href="index.html" class="d-flex align-items-center consult-nav-logo">
+        <img src="img/mellcodelogo/white_logo_transparent_background.png" alt="TheMellCode" height="36">
+      </a>
+      <a href="index.html" class="consult-back-link">
+        <i class="fas fa-arrow-left mr-1"></i> Back to Site
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="consult-hero text-white text-center">
+    <div class="container py-5">
+      <h1 class="consult-title mb-2">Let's Get Started</h1>
+      <p class="consult-subtitle mb-4">Two quick steps — tell me about your needs, then pick a time that works for you.</p>
+
+      <!-- Step Indicator -->
+      <div class="step-indicator d-flex justify-content-center align-items-center">
+        <div class="step-pill step-active">
+          <span class="step-num">1</span>
+          <span class="step-text">Intake Form</span>
+        </div>
+        <div class="step-arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="step-pill">
+          <span class="step-num">2</span>
+          <span class="step-text">Schedule Call</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container consult-content py-5">
+
+    <!-- ── STEP 1: Intake Form ───────────────────── -->
+    <div class="consult-step-block mb-5" id="step1">
+      <div class="consult-step-header d-flex align-items-center mb-4">
+        <div class="consult-step-badge mr-3">1</div>
+        <div>
+          <h2 class="mb-0">Tell Me About Your Needs</h2>
+          <p class="text-muted mb-0">Takes about 3–5 minutes. This helps me come to the call prepared.</p>
+        </div>
+      </div>
+      <div class="consult-form-wrap">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfE4M3nZTPhNjS9_7INvEMe6FYevpJSJq1Z4W2oNy86F8RskQ/viewform?embedded=true" width="100%" height="1076" frameborder="0" marginheight="0" marginwidth="0" title="TheMellCode IT Consulting Intake Form">Loading…</iframe>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="consult-divider text-center my-5">
+      <div class="divider-line"></div>
+      <div class="divider-badge">
+        <i class="fas fa-arrow-down mr-1"></i> After submitting the form, schedule your call below
+      </div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- ── STEP 2: Calendly ──────────────────────── -->
+    <div class="consult-step-block mb-5" id="step2">
+      <div class="consult-step-header d-flex align-items-center mb-4">
+        <div class="consult-step-badge mr-3">2</div>
+        <div>
+          <h2 class="mb-0">Schedule Your Discovery Call</h2>
+          <p class="text-muted mb-0">Free 30-minute call. No commitment. Pick a time that works for you.</p>
+        </div>
+      </div>
+
+      <div class="consult-calendly-wrap">
+        <!-- Calendly inline widget begin -->
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/mjlessington/it-consultation?primary_color=ecb807"
+          style="min-width:320px;height:700px;">
+        </div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="consult-footer text-center py-4">
+    <div class="container">
+      <p class="mb-1 small text-muted">&copy; TheMellCode 2026. All rights reserved.</p>
+      <p class="mb-0 small text-muted">
+        Questions? Email <a href="mailto:info@themellcode.com" class="consult-footer-link">info@themellcode.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Smooth scroll "After submitting, schedule below" arrow
+    document.addEventListener('DOMContentLoaded', function () {
+      // Highlight step 2 badge after Google Form submits
+      // Google Forms posts a message when submitted — listen for it
+      window.addEventListener('message', function (e) {
+        if (e.origin === 'https://docs.google.com' && e.data && e.data.indexOf && e.data.indexOf('formResponse') !== -1) {
+          // Form submitted — scroll to step 2 and activate it
+          document.getElementById('step2').scrollIntoView({ behavior: 'smooth' });
+          // Update step indicator
+          var pills = document.querySelectorAll('.step-pill');
+          if (pills[0]) pills[0].classList.remove('step-active');
+          if (pills[1]) pills[1].classList.add('step-active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
