@@ -30,11 +30,43 @@
   justify-content: center;
 }
 
+/* ── Skip Link (a11y) ────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1.25rem;
+  background: #1a1a1a;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 6px 6px;
+}
+.skip-link:focus {
+  top: 0;
+}
+
 /* ── Small Label (eyebrow text) ──────────────── */
 .small-label {
   font-size: 0.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+/* ── Section eyebrow (replaces h3.text-secondary) */
+/* #7a6000 on #fff = 5.5:1, on #f8f9fa = 5.3:1 — passes AA */
+.section-eyebrow {
+  color: #7a6000;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+/* On dark backgrounds (bg-primary), use the brand yellow */
+.bg-primary .section-eyebrow {
+  color: #ecb807;
 }
 
 /* ── About Section ───────────────────────────── */
@@ -197,6 +229,17 @@
   background: #F0F0F3;
   box-shadow: 10px 10px 21px #d3d3d6,
               -10px -10px 21px #ffffff;
+}
+
+/* ── Button contrast fix ─────────────────────── */
+/* #ecb807 yellow with white text = 1.83:1 (FAILS).
+   Dark text on yellow = ~9:1 (passes AAA). */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active {
+  color: #1a1a1a !important;
 }
 
 /* ── Responsive tweaks ───────────────────────── */

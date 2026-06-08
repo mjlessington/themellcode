@@ -25,10 +25,13 @@
 
 <body id="page-top">
 
+  <!-- Skip link -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <!-- Navigation -->
-  <a class="menu-toggle rounded" href="#">
-    <i class="fas fa-bars"></i>
-  </a>
+  <button class="menu-toggle rounded" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar-wrapper">
+    <i class="fas fa-bars" aria-hidden="true"></i>
+  </button>
   <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
@@ -54,13 +57,15 @@
     </ul>
   </nav>
 
+  <main id="main-content">
+
   <!-- Header / Hero -->
   <header class="masthead d-flex">
     <div class="container text-center my-auto">
       <div class="mb-3">
         <img class="img-fluid hero-logo" src="img/mellcodelogo/logo_transparent_background.png" alt="TheMellCode">
       </div>
-      <h2 class="hero-tagline mb-2">IT Consulting for the Modern Business</h2>
+      <h1 class="hero-tagline mb-2">IT Consulting for the Modern Business</h1>
       <p class="hero-sub mb-4">Infrastructure &nbsp;·&nbsp; Cloud &nbsp;·&nbsp; Strategy &nbsp;·&nbsp; Software &nbsp;·&nbsp; AI</p>
       <div class="hero-cta-group">
         <a class="btn btn-primary btn-xl js-scroll-trigger mr-3" href="#services">What I Do</a>
@@ -80,7 +85,7 @@
           </div>
         </div>
         <div class="col-lg-7">
-          <h3 class="text-secondary text-uppercase small-label mb-1">About</h3>
+          <p class="section-eyebrow text-uppercase small-label mb-1">About</p>
           <h2 class="mb-4">Hi, I'm Mell.</h2>
           <p class="lead mb-3">I'm an IT professional and consultant with hands-on experience across systems administration, cloud infrastructure, IT strategy, and software development. I help businesses cut through the noise, modernize their technology, and build systems that actually work for them.</p>
           <p class="mb-4">Whether you're a small business that's never had real IT support, a growing company that needs a technology roadmap, or an organization facing a specific technical challenge — I bring the expertise of an in-house IT team without the overhead of a full-time hire.</p>
@@ -93,7 +98,9 @@
             <div class="col-auto mb-2"><span class="badge-expertise">Workflow Automation</span></div>
             <div class="col-auto mb-2"><span class="badge-expertise">Web Development</span></div>
           </div>
-          <a class="btn btn-primary js-scroll-trigger" href="#contact">Start a Conversation</a>
+          <div class="text-center text-lg-left">
+            <a class="btn btn-primary js-scroll-trigger" href="#contact">Start a Conversation</a>
+          </div>
         </div>
       </div>
     </div>
@@ -127,7 +134,7 @@
   <section class="content-section bg-primary text-white text-center" id="services">
     <div class="container">
       <div class="content-section-heading">
-        <h3 class="text-secondary mb-0">Services</h3>
+        <p class="section-eyebrow mb-0 small-label">Services</p>
         <h2 class="mb-2">What I Offer</h2>
         <p class="text-faded mb-5">Practical IT solutions tailored to your business — not just your technology.</p>
       </div>
@@ -138,7 +145,7 @@
             <span class="service-icon rounded-circle mx-auto mb-3">
               <i class="fas fa-server"></i>
             </span>
-            <h4><strong>IT Infrastructure &amp; Sysadmin</strong></h4>
+            <h3><strong>IT Infrastructure &amp; Sysadmin</strong></h3>
             <p class="text-faded mb-3">Server setup and management, network design, cloud deployment (AWS, Azure, GCP), backup and disaster recovery, endpoint management, and security hardening.</p>
             <span class="service-tag">On-Prem</span>
             <span class="service-tag">Cloud</span>
@@ -151,7 +158,7 @@
             <span class="service-icon rounded-circle mx-auto mb-3">
               <i class="fas fa-chess"></i>
             </span>
-            <h4><strong>IT Strategy &amp; Advisory</strong></h4>
+            <h3><strong>IT Strategy &amp; Advisory</strong></h3>
             <p class="text-faded mb-3">Technology roadmaps, vendor selection, IT budget planning, fractional CIO services, and project management for organizations that need IT leadership without a full-time hire.</p>
             <span class="service-tag">vCIO</span>
             <span class="service-tag">Roadmaps</span>
@@ -164,7 +171,7 @@
             <span class="service-icon rounded-circle mx-auto mb-3">
               <i class="fas fa-code"></i>
             </span>
-            <h4><strong>Software &amp; Automation</strong></h4>
+            <h3><strong>Software &amp; Automation</strong></h3>
             <p class="text-faded mb-3">Custom web applications, API integrations, workflow automation, and full-stack web development. From internal tools to client-facing platforms — built to solve real problems.</p>
             <span class="service-tag">Web Dev</span>
             <span class="service-tag">Integrations</span>
@@ -177,7 +184,7 @@
             <span class="service-icon rounded-circle mx-auto mb-3">
               <i class="fas fa-brain"></i>
             </span>
-            <h4><strong>AI Strategy &amp; Integration</strong></h4>
+            <h3><strong>AI Strategy &amp; Integration</strong></h3>
             <p class="text-faded mb-3">AI readiness assessments, tool selection, and hands-on implementation. From automating repetitive workflows to integrating LLMs into your products — practical AI that actually moves the needle.</p>
             <span class="service-tag">LLM Integration</span>
             <span class="service-tag">AI Agents</span>
@@ -202,7 +209,7 @@
   <section class="content-section bg-light" id="why">
     <div class="container">
       <div class="content-section-heading text-center mb-5">
-        <h3 class="text-secondary mb-0">Why TheMellCode</h3>
+        <p class="section-eyebrow mb-0 small-label">Why TheMellCode</p>
         <h2>The difference you'll actually feel</h2>
       </div>
       <div class="row">
@@ -210,7 +217,7 @@
           <div class="why-item d-flex align-items-start">
             <div class="why-icon mr-4"><i class="fas fa-shield-alt"></i></div>
             <div>
-              <h5 class="mb-1">Vendor-Neutral Advice</h5>
+              <h3 class="mb-1">Vendor-Neutral Advice</h3>
               <p class="mb-0 text-muted">No product commissions. No hidden incentives. Every recommendation is based purely on what's best for your business.</p>
             </div>
           </div>
@@ -219,7 +226,7 @@
           <div class="why-item d-flex align-items-start">
             <div class="why-icon mr-4"><i class="fas fa-user-tie"></i></div>
             <div>
-              <h5 class="mb-1">You Work With Me Directly</h5>
+              <h3 class="mb-1">You Work With Me Directly</h3>
               <p class="mb-0 text-muted">No ticket queues, no junior handoffs. When you hire TheMellCode, you get Mell — start to finish.</p>
             </div>
           </div>
@@ -228,7 +235,7 @@
           <div class="why-item d-flex align-items-start">
             <div class="why-icon mr-4"><i class="fas fa-sliders-h"></i></div>
             <div>
-              <h5 class="mb-1">Flexible Engagements</h5>
+              <h3 class="mb-1">Flexible Engagements</h3>
               <p class="mb-0 text-muted">Hourly, monthly retainer, or fixed-price project — no long-term lock-in. We scale the engagement to your needs and budget.</p>
             </div>
           </div>
@@ -237,7 +244,7 @@
           <div class="why-item d-flex align-items-start">
             <div class="why-icon mr-4"><i class="fas fa-chart-line"></i></div>
             <div>
-              <h5 class="mb-1">Business-First Mindset</h5>
+              <h3 class="mb-1">Business-First Mindset</h3>
               <p class="mb-0 text-muted">Technology serves your goals, not the other way around. Every solution is tied to a business outcome, not just a spec sheet.</p>
             </div>
           </div>
@@ -246,7 +253,7 @@
           <div class="why-item d-flex align-items-start">
             <div class="why-icon mr-4"><i class="fas fa-layer-group"></i></div>
             <div>
-              <h5 class="mb-1">Full-Stack IT Depth</h5>
+              <h3 class="mb-1">Full-Stack IT Depth</h3>
               <p class="mb-0 text-muted">From server rack to software layer — broad expertise across infrastructure, strategy, and development means fewer vendors and fewer gaps.</p>
             </div>
           </div>
@@ -255,16 +262,16 @@
           <div class="why-item d-flex align-items-start">
             <div class="why-icon mr-4"><i class="fas fa-robot"></i></div>
             <div>
-              <h5 class="mb-1">Practical AI — Not Hype</h5>
+              <h3 class="mb-1">Practical AI — Not Hype</h3>
               <p class="mb-0 text-muted">AI expertise grounded in real implementation. I help businesses identify where AI actually creates value, then build it — no buzzwords, no fluff.</p>
             </div>
           </div>
         </div>
-        <div class="col-md-6 mb-4">
+        <div class="col-md-6 mb-4 mx-auto">
           <div class="why-item d-flex align-items-start">
             <div class="why-icon mr-4"><i class="fas fa-handshake"></i></div>
             <div>
-              <h5 class="mb-1">Proven Track Record</h5>
+              <h3 class="mb-1">Proven Track Record</h3>
               <p class="mb-0 text-muted">Real clients, real results. See the portfolio for a sample of websites, systems, and digital experiences delivered across multiple industries.</p>
             </div>
           </div>
@@ -381,7 +388,7 @@
   <section class="content-section bg-primary text-white text-center" id="contact">
     <div class="container">
       <div class="content-section-heading mb-5">
-        <h3 class="text-secondary mb-0">Let's Talk</h3>
+        <p class="section-eyebrow mb-0 small-label">Let's Talk</p>
         <h2 class="mb-3">Ready to solve your IT challenges?</h2>
         <p class="text-faded lead mb-4">Whether you have a specific problem or just don't know where to start — getting started takes less than 5 minutes.</p>
       </div>
@@ -392,7 +399,7 @@
           <div class="contact-card contact-card-primary mb-4">
             <div class="row align-items-center text-left">
               <div class="col-md-8 mb-3 mb-md-0">
-                <h4 class="mb-1">Start Here — It's a 2-Step Process</h4>
+                <h3 class="mb-1">Start Here — It's a 2-Step Process</h3>
                 <p class="text-faded mb-0">Fill out a quick intake form so I understand your needs, then pick a time for a free 30-minute discovery call — all on one page.</p>
               </div>
               <div class="col-md-4 text-center text-md-right">
@@ -411,7 +418,7 @@
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="contact-card">
             <div class="contact-card-icon mb-3"><i class="fas fa-calendar-check fa-2x"></i></div>
-            <h5 class="mb-2">Jump Straight to Scheduling</h5>
+            <h4 class="mb-2">Jump Straight to Scheduling</h4>
             <p class="text-faded small mb-3">Already know what you need? Skip the form and book directly.</p>
             <a href="consult.html#step2" class="btn btn-outline-light btn-block">Schedule a Call</a>
           </div>
@@ -419,7 +426,7 @@
         <div class="col-lg-4 col-md-6 mb-4">
           <div class="contact-card">
             <div class="contact-card-icon mb-3"><i class="fas fa-envelope fa-2x"></i></div>
-            <h5 class="mb-2">Send a Message</h5>
+            <h4 class="mb-2">Send a Message</h4>
             <p class="text-faded small mb-3">Prefer email? Reach out directly and I'll respond within one business day.</p>
             <a href="mailto:info@themellcode.com" class="btn btn-outline-light btn-block">Email Mell</a>
           </div>
@@ -427,6 +434,8 @@
       </div>
     </div>
   </section>
+
+  </main><!-- /#main-content -->
 
   <!-- Footer -->
   <footer class="footer text-center">
@@ -456,8 +465,8 @@
   </footer>
 
   <!-- Scroll to Top -->
-  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
-    <i class="fas fa-angle-up"></i>
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top" aria-label="Scroll to top">
+    <i class="fas fa-angle-up" aria-hidden="true"></i>
   </a>
 
   <!-- Bootstrap core JavaScript -->
@@ -465,6 +474,13 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/stylish-portfolio.min.js"></script>
+  <script>
+    // Sync aria-expanded on the menu toggle button for screen readers
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+    });
+  </script>
 
 </body>
 </html>
