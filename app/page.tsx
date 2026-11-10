@@ -3,10 +3,10 @@ import { Icon } from "@/components/Icon";
 import { audiences, featuredService, process, reasons, site, supportingServices } from "@/lib/site";
 
 const workflow = [
-  { label: "Donation form submitted", meta: "Website" },
-  { label: "Donor record updated", meta: "CRM" },
-  { label: "Thank-you email drafted", meta: "AI" },
-  { label: "Weekly report sent", meta: "Auto" },
+  { label: "New lead captured", meta: "Website" },
+  { label: "Lead qualified and routed", meta: "AI" },
+  { label: "Proposal drafted", meta: "AI" },
+  { label: "Invoice sent on signing", meta: "Auto" },
 ];
 
 const ticker = [
@@ -58,12 +58,12 @@ export default function Home() {
           <div className="hero-visual" data-reveal>
             <div className="ring ring-1" aria-hidden="true" />
             <div className="ring ring-2" aria-hidden="true" />
-            <div className="flow glass" role="img" aria-label="Example automation: a donation moves through four automated steps">
+            <div className="flow glass" role="img" aria-label="Example automation: a new sales lead moves through four automated steps, from capture to invoice">
               <div className="flow-head">
                 <span className="flow-logo">
                   <Icon name="code" size={14} />
                 </span>
-                <span className="flow-title">donor-follow-up</span>
+                <span className="flow-title">lead-to-invoice</span>
                 <span className="flow-live">
                   <span className="pulse" /> live
                 </span>
@@ -129,7 +129,7 @@ export default function Home() {
                 </ul>
               </div>
               <div className="chat" aria-hidden="true">
-                <div className="bubble bubble-user">Draft this month&apos;s donor update from our CRM notes</div>
+                <div className="bubble bubble-user">Summarize this week&apos;s sales calls and flag who needs a follow-up</div>
                 <div className="bubble bubble-ai">
                   <span className="typing">
                     <i />
@@ -144,7 +144,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="chat-done">
-                  <Icon name="check" size={14} /> Draft ready for review
+                  <Icon name="check" size={14} /> Summary and follow-up list ready
                 </div>
               </div>
             </article>

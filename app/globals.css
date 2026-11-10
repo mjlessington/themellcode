@@ -562,6 +562,9 @@ img { max-width: 100%; height: auto; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition-duration: 0.01ms !important; transition-delay: 0s !important; }
   .js [data-reveal] { opacity: 1; transform: none; }
+  .js .tile-feature .ai-lines i, .js .flow-steps li, .js .flow-steps .flow-check { transform: none; opacity: 1; }
+  .js .tile-feature .typing { opacity: 0; }
+  .js .tile-feature .chat-done { opacity: 1; }
 }
 
 .sr-only {
