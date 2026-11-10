@@ -53,7 +53,7 @@ export const audiences = [
     ],
   },
   {
-    title: "Nonprofits & ministries",
+    title: "Nonprofits",
     intro:
       "Mission-driven organizations that want to stretch every dollar and volunteer hour further.",
     examples: [

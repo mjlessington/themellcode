@@ -11,9 +11,15 @@ export default function GetStarted() {
   return (
     <>
       <section className="page-hero">
+        <div className="hero-bg" aria-hidden="true">
+          <div className="grid-lines" />
+          <div className="orb orb-1" />
+        </div>
         <div className="container narrow">
-          <p className="eyebrow">Get started</p>
-          <h1>Two quick steps to your discovery call</h1>
+          <p className="kicker">{"// get started"}</p>
+          <h1>
+            Two quick steps to your <span className="shine">discovery call.</span>
+          </h1>
           <p className="lead">
             Tell us about your needs so we come prepared, then pick a time that works for you. The call is free
             and there&apos;s no commitment.
