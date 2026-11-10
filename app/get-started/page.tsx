@@ -16,7 +16,9 @@ export default function GetStarted() {
           <div className="orb orb-1" />
         </div>
         <div className="container narrow">
-          <p className="kicker">{"// get started"}</p>
+          <p className="label">
+            <span className="label-n">[go]</span> Get started
+          </p>
           <h1>
             Two quick steps to your <span className="shine">discovery call.</span>
           </h1>

@@ -24,8 +24,11 @@ export function Header() {
         </Link>
 
         <nav className={`nav ${open ? "is-open" : ""}`} aria-label="Main">
-          {links.map((l) => (
+          {links.map((l, i) => (
             <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
+              <span className="nav-n" aria-hidden="true">
+                0{i + 1}
+              </span>
               {l.label}
             </Link>
           ))}

@@ -1,27 +1,23 @@
 import Link from "next/link";
 import { Icon } from "@/components/Icon";
+import { Scramble } from "@/components/Scramble";
+import { StickyCta } from "@/components/StickyCta";
+import { Terminal } from "@/components/Terminal";
 import { audiences, featuredService, process, reasons, site, supportingServices } from "@/lib/site";
 
-const workflow = [
-  { label: "New lead captured", meta: "Website" },
-  { label: "Lead qualified and routed", meta: "Auto" },
-  { label: "Proposal drafted", meta: "AI" },
-  { label: "Invoice sent on signing", meta: "Auto" },
-];
+const marquee = ["Assess", "Automate", "Integrate", "Secure", "Support"];
 
-const ticker = [
-  "Process assessments",
-  "Workflow automation",
-  "AI assistants",
-  "LLM integration",
-  "Cloud & infrastructure",
-  "Fractional CIO",
-  "Custom software",
-  "Staff AI training",
-  "Data cleanup",
-];
+const nodesIn = ["Email", "Web forms", "Spreadsheets", "CRM"];
+const nodesOut = ["Reports", "Invoices", "Follow-ups"];
 
-const reasonIcons = ["compass", "sparkles", "server", "check", "calendar", "arrowRight"];
+function Label({ n, children }: { n: string; children: React.ReactNode }) {
+  return (
+    <p className="label">
+      <span className="label-n">[{n}]</span> {children}
+      <span className="label-rule" aria-hidden="true" />
+    </p>
+  );
+}
 
 export default function Home() {
   return (
@@ -31,16 +27,21 @@ export default function Home() {
         <div className="hero-bg" aria-hidden="true">
           <div className="grid-lines" />
           <div className="orb orb-1" />
-          <div className="orb orb-2" />
+          <div className="scan" />
         </div>
 
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="pill" data-reveal>
-              <span className="pulse" /> Automation, AI &amp; IT consulting
+            <p className="tagline" data-reveal>
+              <span className="pulse" /> automation <span className="sep">/</span> ai <span className="sep">/</span> it
             </p>
             <h1 className="display" data-reveal>
-              Less busywork. <span className="shine">Smarter systems.</span>
+              <span className="display-line">
+                <Scramble text="Less busywork." />
+              </span>
+              <span className="display-line shine">
+                <Scramble text="Smarter systems." delay={250} />
+              </span>
             </h1>
             <p className="lead" data-reveal>
               We start by mapping how your team actually works. Then we build the right fix for each process,
@@ -50,113 +51,96 @@ export default function Home() {
               <Link href="/get-started" className="btn btn-primary btn-lg">
                 Book a free discovery call <Icon name="arrowRight" size={18} />
               </Link>
-              <Link href="/#services" className="btn btn-glass btn-lg">
+              <Link href="/#services" className="btn btn-outline btn-lg">
                 Explore services
               </Link>
             </div>
           </div>
 
           <div className="hero-visual" data-reveal>
-            <div className="ring ring-1" aria-hidden="true" />
-            <div className="ring ring-2" aria-hidden="true" />
-            <div className="flow glass" role="img" aria-label="Example automation: a new sales lead moves through four automated steps, from capture to invoice">
-              <div className="flow-head">
-                <span className="flow-logo">
-                  <Icon name="code" size={14} />
-                </span>
-                <span className="flow-title">lead-to-invoice</span>
-                <span className="flow-live">
-                  <span className="pulse" /> live
-                </span>
-              </div>
-              <ol className="flow-steps">
-                {workflow.map((s, i) => (
-                  <li key={s.label} style={{ "--i": i } as React.CSSProperties}>
-                    <span className="flow-check">
-                      <Icon name="check" size={13} />
-                    </span>
-                    <span className="flow-label">{s.label}</span>
-                    <span className="flow-meta">{s.meta}</span>
-                  </li>
-                ))}
-              </ol>
-              <div className="flow-foot">
-                <Icon name="sparkles" size={15} /> Runs on its own, every time
-              </div>
-            </div>
-            <div className="float-chip chip-a glass" aria-hidden="true">
-              <Icon name="sparkles" size={14} /> AI drafted
-            </div>
-            <div className="float-chip chip-b glass" aria-hidden="true">
-              <Icon name="check" size={14} /> No manual entry
-            </div>
-          </div>
-        </div>
-
-        <div className="ticker" aria-hidden="true">
-          <div className="ticker-track">
-            {[...ticker, ...ticker].map((t, i) => (
-              <span key={i}>{t}</span>
-            ))}
+            <Terminal />
           </div>
         </div>
       </section>
 
-      {/* ---------- Services (bento) ---------- */}
+      <div className="mega-marquee" aria-hidden="true">
+        <div className="mega-track">
+          {[...marquee, ...marquee, ...marquee].map((w, i) => (
+            <span key={i} className={i % 2 ? "outline" : ""}>
+              {w}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* ---------- Services ---------- */}
       <section id="services" className="section">
         <div className="container">
           <div className="section-head" data-reveal>
-            <p className="kicker">{"// services"}</p>
+            <Label n="01">Services</Label>
             <h2>
-              The right fix for every workflow, <span className="muted-strong">built on solid IT.</span>
+              The right fix for every workflow, <span className="dim">built on solid IT.</span>
             </h2>
           </div>
 
-          <div className="bento">
-            <article className="tile tile-feature spotlight" data-reveal>
-              <div className="tile-feature-copy">
-                <span className="icon-chip icon-chip-lg">
-                  <Icon name="sparkles" size={26} />
+          <article className="feature brackets spotlight" data-reveal>
+            <div className="feature-copy">
+              <p className="mono-tag">core offering</p>
+              <h3>{featuredService.title}</h3>
+              <p className="muted">{featuredService.summary}</p>
+              <ul className="check-list">
+                {featuredService.items.map((item) => (
+                  <li key={item}>
+                    <Icon name="check" size={18} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flowmap" aria-hidden="true">
+              <div className="flow-col">
+                {nodesIn.map((n) => (
+                  <span key={n} className="node">
+                    {n}
+                  </span>
+                ))}
+              </div>
+              <div className="flow-wires">
+                <span />
+                <span />
+                <span />
+                <span />
+              </div>
+              <div className="hub">
+                <span className="hub-mark">
+                  <Icon name="code" size={22} />
                 </span>
-                <h3>{featuredService.title}</h3>
-                <p className="muted">{featuredService.summary}</p>
-                <ul className="check-list">
-                  {featuredService.items.map((item) => (
-                    <li key={item}>
-                      <Icon name="check" size={18} />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                <span className="hub-label">your workflow</span>
               </div>
-              <div className="chat" aria-hidden="true">
-                <div className="bubble bubble-user">Summarize this week&apos;s sales calls and flag who needs a follow-up</div>
-                <div className="bubble bubble-ai">
-                  <span className="typing">
-                    <i />
-                    <i />
-                    <i />
-                  </span>
-                  <span className="ai-lines">
-                    <i style={{ width: "92%" }} />
-                    <i style={{ width: "78%" }} />
-                    <i style={{ width: "86%" }} />
-                    <i style={{ width: "54%" }} />
-                  </span>
-                </div>
-                <div className="chat-done">
-                  <Icon name="check" size={14} /> Summary and follow-up list ready
-                </div>
+              <div className="flow-wires out">
+                <span />
+                <span />
+                <span />
               </div>
-            </article>
+              <div className="flow-col">
+                {nodesOut.map((n) => (
+                  <span key={n} className="node node-out">
+                    {n}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </article>
 
-            {supportingServices.map((s) => (
-              <article key={s.title} className="tile spotlight" data-reveal>
-                <span className="icon-chip">
-                  <Icon name={s.icon} size={22} />
-                </span>
+          <div className="rows">
+            {supportingServices.map((s, i) => (
+              <article key={s.title} className="row spotlight" data-reveal>
+                <span className="row-n">0{i + 2}</span>
                 <h3>{s.title}</h3>
                 <p className="muted">{s.body}</p>
+                <span className="row-icon" aria-hidden="true">
+                  <Icon name={s.icon} size={22} />
+                </span>
               </article>
             ))}
           </div>
@@ -164,19 +148,21 @@ export default function Home() {
       </section>
 
       {/* ---------- Who we help ---------- */}
-      <section id="who-we-help" className="section section-band">
-        <div className="band-glow" aria-hidden="true" />
+      <section id="who-we-help" className="section section-ink">
+        <div className="ink-grid" aria-hidden="true" />
         <div className="container">
           <div className="section-head" data-reveal>
-            <p className="kicker">{"// who we help"}</p>
+            <Label n="02">Who we help</Label>
             <h2>
-              Lean teams. <span className="muted-strong">Big ambitions.</span>
+              Lean teams. <span className="dim">Big ambitions.</span>
             </h2>
           </div>
           <div className="split">
             {audiences.map((a, i) => (
-              <article key={a.title} className="panel spotlight" data-reveal>
-                <span className="panel-num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+              <article key={a.title} className="panel brackets spotlight" data-reveal>
+                <span className="panel-num" aria-hidden="true">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
                 <h3>{a.title}</h3>
                 <p className="muted">{a.intro}</p>
                 <ul className="check-list">
@@ -197,15 +183,15 @@ export default function Home() {
       <section id="process" className="section">
         <div className="container">
           <div className="section-head" data-reveal>
-            <p className="kicker">{"// how we work"}</p>
+            <Label n="03">How we work</Label>
             <h2>
-              First call to working system, <span className="muted-strong">in four steps.</span>
+              Assess first. <span className="dim">Then build.</span>
             </h2>
           </div>
-          <ol className="timeline">
+          <ol className="steps">
             {process.map((p, i) => (
-              <li key={p.title} className="timeline-step" data-reveal style={{ "--i": i } as React.CSSProperties}>
-                <span className="timeline-node">{String(i + 1).padStart(2, "0")}</span>
+              <li key={p.title} className="step" data-reveal style={{ "--i": i } as React.CSSProperties}>
+                <span className="step-n">step_0{i + 1}</span>
                 <h3>{p.title}</h3>
                 <p className="muted">{p.body}</p>
               </li>
@@ -215,20 +201,18 @@ export default function Home() {
       </section>
 
       {/* ---------- Why us ---------- */}
-      <section id="why" className="section">
+      <section id="why" className="section section-tight-top">
         <div className="container">
           <div className="section-head" data-reveal>
-            <p className="kicker">{"// why themellcode"}</p>
+            <Label n="04">Why TheMellCode</Label>
             <h2>
-              Senior expertise, <span className="muted-strong">without the overhead.</span>
+              Senior expertise, <span className="dim">without the overhead.</span>
             </h2>
           </div>
-          <div className="reasons">
+          <div className="matrix" data-reveal>
             {reasons.map((r, i) => (
-              <div key={r.title} className="reason spotlight" data-reveal>
-                <span className="reason-icon">
-                  <Icon name={reasonIcons[i % reasonIcons.length]} size={20} />
-                </span>
+              <div key={r.title} className="cell spotlight">
+                <span className="cell-n">{String(i + 1).padStart(2, "0")}</span>
                 <h3>{r.title}</h3>
                 <p className="muted">{r.body}</p>
               </div>
@@ -240,12 +224,14 @@ export default function Home() {
       {/* ---------- CTA ---------- */}
       <section className="section section-tight">
         <div className="container">
-          <div className="cta" data-reveal>
+          <div className="cta brackets" data-reveal>
             <div className="cta-bg" aria-hidden="true">
               <div className="grid-lines" />
               <div className="orb orb-cta" />
             </div>
-            <p className="kicker">{"// next step"}</p>
+            <p className="cta-prompt">
+              <span aria-hidden="true">$ </span>start --discovery-call<span className="caret" aria-hidden="true" />
+            </p>
             <h2 className="cta-title">
               Find out where your team is <span className="shine">losing time.</span>
             </h2>
@@ -257,13 +243,15 @@ export default function Home() {
               <Link href="/get-started" className="btn btn-primary btn-lg">
                 Get started <Icon name="arrowRight" size={18} />
               </Link>
-              <a href={`mailto:${site.email}`} className="btn btn-glass btn-lg">
+              <a href={`mailto:${site.email}`} className="btn btn-outline btn-lg">
                 <Icon name="mail" size={18} /> {site.email}
               </a>
             </div>
           </div>
         </div>
       </section>
+
+      <StickyCta />
     </>
   );
 }
