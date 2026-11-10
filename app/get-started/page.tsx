@@ -4,7 +4,7 @@ import { Booking } from "./Booking";
 export const metadata: Metadata = {
   title: "Get Started",
   description:
-    "Tell TheMellCode about your organization and schedule a free discovery call about automation, AI, and IT.",
+    "Schedule a free discovery call with TheMellCode, serving small businesses and nonprofits in Atlanta and Charlotte. We'll scope your Workflow Assessment and next steps.",
 };
 
 export default function GetStarted() {
@@ -24,7 +24,7 @@ export default function GetStarted() {
           </h1>
           <p className="lead">
             Tell us about your needs so we come prepared, then pick a time that works for you. The call is free
-            and there&apos;s no commitment.
+            and there&apos;s no commitment. It&apos;s also where we scope your Workflow Assessment, if it&apos;s a fit.
           </p>
         </div>
       </section>

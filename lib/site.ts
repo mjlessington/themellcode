@@ -6,9 +6,64 @@ export const site = {
   calendly: "https://calendly.com/mjlessington/it-consultation",
   intakeForm:
     "https://docs.google.com/forms/d/e/1FAIpQLSfE4M3nZTPhNjS9_7INvEMe6FYevpJSJq1Z4W2oNy86F8RskQ/viewform?embedded=true",
+  areas: ["Atlanta, GA", "Charlotte, NC"],
   description:
-    "TheMellCode helps small businesses and nonprofits cut busywork. We assess how your team works, then build the right fix: a simple automation, an AI tool, or stronger IT underneath.",
+    "TheMellCode helps small businesses and nonprofits in Atlanta and Charlotte cut busywork. We assess how your team works, then build the right fix: a simple automation, an AI tool, or stronger IT underneath.",
 };
+
+export const assessment = {
+  name: "Workflow Assessment",
+  price: "$950",
+  priceNote: "Fixed price. Credited toward any build project booked within 60 days.",
+  timeline: "About 2 weeks",
+  summary:
+    "Before anyone recommends a tool, we look at how work actually moves through your team. You get a clear picture of where time is going and a plan to get it back, with costs and expected hours saved for every fix.",
+  parts: [
+    {
+      title: "Kickoff interview",
+      body: "60 to 90 minutes with you and one or two staff to map how work moves today.",
+    },
+    {
+      title: "Workflow map",
+      body: "Your 3 most time-consuming processes, drawn out step by step, with hours spent per week.",
+    },
+    {
+      title: "Recommendations",
+      body: "The right fix for each process (automation, AI, a process change, or IT) with cost and expected hours saved.",
+    },
+    {
+      title: "90-day roadmap",
+      body: "A prioritized plan that puts the quick wins first.",
+    },
+    {
+      title: "Readout",
+      body: "A 45-minute walkthrough call and a written report you keep.",
+    },
+  ],
+};
+
+export const faqs = [
+  {
+    q: "How long does the assessment take?",
+    a: "About two weeks from kickoff to readout. Your team spends roughly two to three hours in total: the kickoff interview, a few follow-up questions, and the readout call.",
+  },
+  {
+    q: "What do you need from us?",
+    a: "Time with the owner and one or two people who do the day-to-day work, plus a look at the tools you use now.",
+  },
+  {
+    q: "What happens after the readout?",
+    a: "You choose. We can build the top fixes for a fixed price, support you on a monthly retainer, or you can take the roadmap and run with it yourself. If you book a build within 60 days, the $950 is credited toward it.",
+  },
+  {
+    q: "What if the answer isn't AI?",
+    a: "Then we won't recommend AI. Many processes need a simple automation, a cleaner handoff, or better IT underneath. The assessment tells you which, and we don't take product commissions.",
+  },
+  {
+    q: "Do you work outside Atlanta and Charlotte?",
+    a: "Yes. We meet clients in the Atlanta and Charlotte areas in person, and the assessment works just as well over video for teams elsewhere in the US.",
+  },
+];
 
 export const featuredService = {
   title: "Automation & AI",
