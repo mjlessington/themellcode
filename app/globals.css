@@ -336,7 +336,7 @@ img { max-width: 100%; height: auto; }
 .section-tight-top { padding-top: 40px; }
 .section-head { max-width: 900px; margin-bottom: 60px; }
 @media (max-width: 700px) {
-  .section { padding: 84px 0; }
+  .section { padding: 48px 0; }
   .section-head { margin-bottom: 40px; }
   .section-tight-top { padding-top: 24px; }
   .section-tight { padding-top: 16px; }
