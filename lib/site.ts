@@ -27,7 +27,7 @@ export const supportingServices = [
   {
     icon: "server",
     title: "IT Infrastructure & Cloud",
-    body: "Network design, Microsoft 365 and Google Workspace, cloud migrations on AWS, Azure, or GCP, backups, and security hardening.",
+    body: "Network design, email and collaboration platforms, cloud migrations, backup and disaster recovery, and security hardening.",
   },
   {
     icon: "compass",
