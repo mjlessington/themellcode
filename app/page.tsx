@@ -44,7 +44,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="lead" data-reveal>
-              We start by mapping how your team actually works. Then we build the right fix for each process,
+              Serving small businesses and nonprofits in Atlanta and Charlotte. We start by mapping how your team actually works. Then we build the right fix for each process,
               whether that&apos;s a simple automation, an AI tool, or stronger IT underneath it.
             </p>
             <div className="cta-row" data-reveal>
@@ -159,6 +159,9 @@ export default function Home() {
             <h2>
               Lean teams. <span className="dim">Big ambitions.</span>
             </h2>
+            <p className="lead">
+              In person across the Atlanta and Charlotte areas, and over video for teams anywhere in the US.
+            </p>
           </div>
           <div className="split">
             {audiences.map((a, i) => (

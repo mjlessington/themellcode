@@ -23,7 +23,7 @@ export default function GetStarted() {
             Two quick steps to your <span className="shine">discovery call.</span>
           </h1>
           <p className="lead">
-            Tell us about your needs so we come prepared, then pick a time that works for you. The call is free
+            Whether you&apos;re in Atlanta, Charlotte, or elsewhere, tell us about your needs so we come prepared, then pick a time that works for you. The call is free
             and there&apos;s no commitment. It&apos;s also where we scope your Workflow Assessment, if it&apos;s a fit.
           </p>
         </div>
