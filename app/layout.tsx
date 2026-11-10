@@ -14,12 +14,12 @@ const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", displ
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "TheMellCode | AI & Automation Consulting",
+    default: "TheMellCode | Automation, AI & IT Consulting",
     template: "%s | TheMellCode",
   },
   description: site.description,
   openGraph: {
-    title: "TheMellCode | AI & Automation Consulting",
+    title: "TheMellCode | Automation, AI & IT Consulting",
     description: site.description,
     url: site.url,
     siteName: site.name,

@@ -259,8 +259,8 @@ img { max-width: 100%; height: auto; }
   font-size: 0.88rem; font-weight: 600; margin-bottom: 28px;
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
 }
-.display { font-size: clamp(2.8rem, 7.2vw, 5.6rem); line-height: 0.98; letter-spacing: -0.045em; margin-bottom: 28px; }
-.display .shine { display: inline; }
+.display { font-size: clamp(2.6rem, 5.6vw, 5rem); line-height: 0.98; letter-spacing: -0.045em; margin-bottom: 28px; }
+.display .shine { display: inline-block; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 .cta-row-center { justify-content: center; }
 

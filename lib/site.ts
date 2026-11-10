@@ -7,19 +7,19 @@ export const site = {
   intakeForm:
     "https://docs.google.com/forms/d/e/1FAIpQLSfE4M3nZTPhNjS9_7INvEMe6FYevpJSJq1Z4W2oNy86F8RskQ/viewform?embedded=true",
   description:
-    "TheMellCode is an AI and automation consultancy for small businesses and nonprofits, backed by hands-on experience in IT infrastructure, strategy, and custom software.",
+    "TheMellCode helps small businesses and nonprofits cut busywork. We assess how your team works, then build the right fix: a simple automation, an AI tool, or stronger IT underneath.",
 };
 
 export const featuredService = {
-  title: "AI & Automation",
+  title: "Automation & AI",
   summary:
-    "We find the repetitive work that eats your team's week, then replace it with AI tools and automations that fit how you already operate.",
+    "We map your workflows first, then match each one to the right fix. Sometimes that's a simple automation, sometimes it's AI, and sometimes it's cleaning up the process itself.",
   items: [
-    "AI readiness assessments and a prioritized roadmap",
-    "Workflow automation across email, forms, CRMs, and spreadsheets",
-    "AI assistants and agents trained on your own documents",
-    "LLM features built into your existing tools and websites",
-    "Staff training and usage policies so AI gets adopted safely",
+    "Workflow and process assessments with a prioritized roadmap",
+    "Automations that connect your email, forms, CRM, and spreadsheets",
+    "AI assistants and agents, where they add real value",
+    "AI features built into your existing tools and website",
+    "Staff training and usage policies for every new tool",
   ],
 };
 
@@ -49,7 +49,7 @@ export const audiences = [
     examples: [
       "Lead follow-up and quoting that run on their own",
       "Invoices, scheduling, and reminders tied together",
-      "A clear plan for which AI tools are worth paying for",
+      "A clear plan for which tools are worth paying for",
     ],
   },
   {
@@ -71,7 +71,7 @@ export const process = [
   },
   {
     title: "Assessment & plan",
-    body: "We map your workflows and hand you a prioritized plan with costs and expected time savings.",
+    body: "We map your workflows and processes, then recommend the right fix for each one, with costs and expected time savings.",
   },
   {
     title: "Build & launch",
@@ -89,8 +89,8 @@ export const reasons = [
     body: "We don't take product commissions. Recommendations are based on what fits your budget and goals.",
   },
   {
-    title: "AI grounded in real builds",
-    body: "We start with the workflow and the outcome, and only bring in AI where it measurably saves time or money.",
+    title: "Right tool for the job",
+    body: "Some processes call for AI. Many need a simple automation or a cleaner process. We recommend whichever actually fits.",
   },
   {
     title: "Full-stack IT depth",

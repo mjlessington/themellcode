@@ -4,12 +4,13 @@ import { audiences, featuredService, process, reasons, site, supportingServices 
 
 const workflow = [
   { label: "New lead captured", meta: "Website" },
-  { label: "Lead qualified and routed", meta: "AI" },
+  { label: "Lead qualified and routed", meta: "Auto" },
   { label: "Proposal drafted", meta: "AI" },
   { label: "Invoice sent on signing", meta: "Auto" },
 ];
 
 const ticker = [
+  "Process assessments",
   "Workflow automation",
   "AI assistants",
   "LLM integration",
@@ -36,14 +37,14 @@ export default function Home() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <p className="pill" data-reveal>
-              <span className="pulse" /> AI &amp; automation consulting
+              <span className="pulse" /> Automation, AI &amp; IT consulting
             </p>
             <h1 className="display" data-reveal>
-              Put AI to work. <span className="shine">Skip the guesswork.</span>
+              Less busywork. <span className="shine">Smarter systems.</span>
             </h1>
             <p className="lead" data-reveal>
-              TheMellCode helps small businesses and nonprofits find where AI and automation save real hours,
-              then builds it on an IT foundation that keeps it running.
+              We start by mapping how your team actually works. Then we build the right fix for each process,
+              whether that&apos;s a simple automation, an AI tool, or stronger IT underneath it.
             </p>
             <div className="cta-row" data-reveal>
               <Link href="/get-started" className="btn btn-primary btn-lg">
@@ -107,7 +108,7 @@ export default function Home() {
           <div className="section-head" data-reveal>
             <p className="kicker">{"// services"}</p>
             <h2>
-              AI first, <span className="muted-strong">with the IT foundation to back it.</span>
+              The right fix for every workflow, <span className="muted-strong">built on solid IT.</span>
             </h2>
           </div>
 
@@ -246,7 +247,7 @@ export default function Home() {
             </div>
             <p className="kicker">{"// next step"}</p>
             <h2 className="cta-title">
-              Find out where AI can save your team <span className="shine">real time.</span>
+              Find out where your team is <span className="shine">losing time.</span>
             </h2>
             <p className="cta-copy">
               Share a little about your organization, then pick a time for a free discovery call. You&apos;ll

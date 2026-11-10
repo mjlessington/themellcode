@@ -4,7 +4,7 @@ import { Booking } from "./Booking";
 export const metadata: Metadata = {
   title: "Get Started",
   description:
-    "Tell TheMellCode about your organization and schedule a free discovery call about AI, automation, and IT.",
+    "Tell TheMellCode about your organization and schedule a free discovery call about automation, AI, and IT.",
 };
 
 export default function GetStarted() {

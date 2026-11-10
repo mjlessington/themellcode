@@ -1,6 +1,6 @@
 # TheMellCode
 
-Marketing site for TheMellCode, an AI, automation, and IT consultancy for small businesses and nonprofits.
+Marketing site for TheMellCode, an automation, AI, and IT consultancy for small businesses and nonprofits.
 
 Built with Next.js (App Router) and plain CSS. Light and dark themes follow the visitor's device setting, with a toggle in the header.
 

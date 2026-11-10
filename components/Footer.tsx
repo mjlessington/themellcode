@@ -11,7 +11,7 @@ export function Footer() {
         <div className="footer-row">
           <div className="footer-brand">
             <Logo height={24} />
-            <p className="muted small">AI, automation, and IT consulting for small businesses and nonprofits.</p>
+            <p className="muted small">Automation, AI, and IT consulting for small businesses and nonprofits.</p>
           </div>
           <nav className="footer-links" aria-label="Footer">
             <Link href="/get-started">Book a call</Link>
