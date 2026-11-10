@@ -3,7 +3,7 @@ import { Icon } from "@/components/Icon";
 import { Scramble } from "@/components/Scramble";
 import { StickyCta } from "@/components/StickyCta";
 import { Terminal } from "@/components/Terminal";
-import { audiences, featuredService, process, reasons, site, supportingServices } from "@/lib/site";
+import { assessment, audiences, faqs, featuredService, process, reasons, site, supportingServices } from "@/lib/site";
 
 const marquee = ["Assess", "Automate", "Integrate", "Secure", "Support"];
 
@@ -51,10 +51,13 @@ export default function Home() {
               <Link href="/get-started" className="btn btn-primary btn-lg">
                 Book a free discovery call <Icon name="arrowRight" size={18} />
               </Link>
-              <Link href="/#services" className="btn btn-outline btn-lg">
-                Explore services
+              <Link href="/#assessment" className="btn btn-outline btn-lg">
+                See the Workflow Assessment
               </Link>
             </div>
+            <p className="hero-note" data-reveal>
+              The call is free. Most clients start with a {assessment.price} fixed-price {assessment.name}.
+            </p>
           </div>
 
           <div className="hero-visual" data-reveal>
@@ -200,11 +203,66 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- Assessment ---------- */}
+      <section id="assessment" className="section section-tight-top">
+        <div className="container">
+          <div className="section-head" data-reveal>
+            <Label n="04">Where to start</Label>
+            <h2>
+              The {assessment.name}. <span className="dim">A clear plan before any build.</span>
+            </h2>
+          </div>
+
+          <article className="offer brackets spotlight" data-reveal>
+            <div className="offer-copy">
+              <p className="mono-tag">fixed-price first step</p>
+              <p className="offer-price">
+                {assessment.price}
+                <span className="offer-time">{assessment.timeline}</span>
+              </p>
+              <p className="muted">{assessment.summary}</p>
+              <p className="offer-note">{assessment.priceNote}</p>
+              <div className="cta-row">
+                <Link href="/get-started" className="btn btn-primary btn-lg">
+                  Book your assessment call <Icon name="arrowRight" size={18} />
+                </Link>
+              </div>
+            </div>
+            <div>
+              <h3 className="offer-list-title">What you get</h3>
+              <ol className="offer-parts">
+                {assessment.parts.map((p, i) => (
+                  <li key={p.title}>
+                    <span className="offer-n" aria-hidden="true">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div>
+                      <h4>{p.title}</h4>
+                      <p className="muted">{p.body}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </article>
+
+          <div className="faq" data-reveal>
+            <h3 className="faq-title">Common questions</h3>
+            {faqs.map((f) => (
+              <details key={f.q} className="faq-item">
+                <summary>{f.q}</summary>
+                <p className="muted">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ---------- Why us ---------- */}
       <section id="why" className="section section-tight-top">
         <div className="container">
           <div className="section-head" data-reveal>
-            <Label n="04">Why TheMellCode</Label>
+            <Label n="05">Why TheMellCode</Label>
             <h2>
               Senior expertise, <span className="dim">without the overhead.</span>
             </h2>
@@ -236,8 +294,9 @@ export default function Home() {
               Find out where your team is <span className="shine">losing time.</span>
             </h2>
             <p className="cta-copy">
-              Share a little about your organization, then pick a time for a free discovery call. You&apos;ll
-              leave with clear next steps, whether or not we work together.
+              Book a free discovery call. We&apos;ll talk through where time is going and whether a{" "}
+              {assessment.price} {assessment.name} is the right first step. You&apos;ll leave with clear next
+              steps either way.
             </p>
             <div className="cta-row cta-row-center">
               <Link href="/get-started" className="btn btn-primary btn-lg">

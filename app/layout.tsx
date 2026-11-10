@@ -14,12 +14,12 @@ const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", displ
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "TheMellCode | Automation, AI & IT Consulting",
+    default: "TheMellCode | Automation, AI & IT Consulting in Atlanta & Charlotte",
     template: "%s | TheMellCode",
   },
   description: site.description,
   openGraph: {
-    title: "TheMellCode | Automation, AI & IT Consulting",
+    title: "TheMellCode | Automation, AI & IT Consulting in Atlanta & Charlotte",
     description: site.description,
     url: site.url,
     siteName: site.name,
@@ -41,6 +41,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              name: site.name,
+              url: site.url,
+              email: site.email,
+              description: site.description,
+              areaServed: [
+                { "@type": "City", name: "Atlanta, GA" },
+                { "@type": "City", name: "Charlotte, NC" },
+              ],
+              sameAs: [site.linkedin],
+            }),
+          }}
+        />
         <a className="skip-link" href="#main">
           Skip to main content
         </a>

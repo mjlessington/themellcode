@@ -530,6 +530,44 @@ img { max-width: 100%; height: auto; }
 .js [data-reveal].is-visible { opacity: 1; transform: none; }
 .js .step[data-reveal] { transition-delay: calc(var(--i, 0) * 0.1s); }
 
+/* Assessment offer */
+.hero-note { color: var(--muted); font-size: 0.95rem; margin: 18px 0 0; }
+.offer {
+  display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start;
+  padding: 52px; border: 1px solid var(--border-strong); background-color: var(--surface);
+}
+.offer-price {
+  font-family: var(--font-display), sans-serif; font-weight: 700; line-height: 1;
+  font-size: clamp(3.4rem, 7vw, 5.2rem); letter-spacing: -0.05em; margin: 0 0 0.3em;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px;
+}
+.offer-time { font-family: var(--font-mono), monospace; font-weight: 400; font-size: 0.95rem; letter-spacing: 0; color: var(--muted); }
+.offer-copy > .muted { font-size: 1.08rem; }
+.offer-note { font-size: 0.95rem; border-left: 3px solid var(--gold); padding-left: 14px; }
+.offer .cta-row { margin-top: 28px; }
+.offer-list-title { font-family: var(--font-mono), monospace; font-size: 0.85rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-ink); margin-bottom: 18px; }
+.offer-parts { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border-strong); }
+.offer-parts li { display: grid; grid-template-columns: 44px 1fr; gap: 12px; padding: 20px 0; border-bottom: 1px solid var(--border-strong); }
+.offer-n { font-family: var(--font-mono), monospace; font-size: 0.85rem; color: var(--gold-ink); padding-top: 3px; }
+.offer-parts h4 { font-family: var(--font-display), sans-serif; font-size: 1.15rem; letter-spacing: -0.015em; margin: 0 0 4px; }
+.offer-parts p { margin: 0; }
+@media (max-width: 980px) { .offer { grid-template-columns: 1fr; padding: 32px 24px; gap: 40px; } }
+@media (max-width: 600px) { .offer .btn { width: 100%; justify-content: center; } }
+
+/* FAQ */
+.faq { margin-top: 64px; max-width: 900px; }
+.faq-title { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.03em; margin-bottom: 20px; }
+.faq-item { border-top: 1px solid var(--border-strong); }
+.faq-item:last-child { border-bottom: 1px solid var(--border-strong); }
+.faq-item summary {
+  cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  padding: 20px 0; font-weight: 600; font-size: 1.08rem; min-height: 44px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; font-family: var(--font-mono), monospace; font-size: 1.4rem; color: var(--gold-ink); line-height: 1; }
+.faq-item[open] summary::after { content: "\2212"; }
+.faq-item p { margin: 0 0 22px; max-width: 70ch; }
+
 /* =========================================================
    Reduced motion and the pause control
    ========================================================= */
